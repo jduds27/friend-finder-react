@@ -1,0 +1,122 @@
+.ff-input {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  color: gray;
+  padding: 15px 0;
+  height: 60px;
+
+
+  .input-wrapper {
+    height: 100%;
+    min-height: 60px;
+    border-bottom: 1px solid #6f6f6f;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .icon-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s;
+
+    &.input-label {
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      left: 10px;
+
+      &.filled {
+        top: 20px;
+        font-size: 12px;
+      }
+    }
+
+    &.error-label {
+      position: absolute;
+      visibility: hidden;
+      &.filled {
+        bottom: 20px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &:hover {
+    .input-label {
+      top: 20px;
+      font-size: 12px;
+    }
+    .error-label {
+      bottom: 20px;
+      font-size: 12px;
+    }
+  }
+
+  .error-label {
+    color: red;
+    transition: none;
+  }
+
+  input {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 5px 0;
+    color: black;
+    padding-top: 5px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0px 100px 100px 0px;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+
+    &:focus ~ .input-label {
+      top: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &.input-error {
+
+    &.input-label {
+        position: absolute;
+        top: 70%;
+        transform: translateY(0%);
+        left: 10px;
+      }
+
+    label {
+      color: red;
+
+
+
+
+      &.error-label {
+        bottom: -20px;
+        visibility: visible;
+        transition: none;
+      }
+    }
+
+  }
+}

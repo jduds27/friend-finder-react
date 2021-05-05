@@ -1,0 +1,6 @@
+- this is a simple node server with a MongoDB
+- install packages (npm install)
+- run database (mongo)
+- in your DB console type (use friend-finder)
+- in a new console cd into the backend and run (node seed.js)
+- now run npm start
