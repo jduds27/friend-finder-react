@@ -1,1 +1,2 @@
-- yarn start
+- install packages run (yarn)
+- run the frontend in localhost (yarn start)
